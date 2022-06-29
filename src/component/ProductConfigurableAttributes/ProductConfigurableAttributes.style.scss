@@ -1,0 +1,75 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.ProductConfigurableAttributes {
+    font-size: 14px;
+    line-height: 20px;
+
+    @include desktop {
+        padding-block-start: 24px;
+        padding-block-end: 45px;
+    }
+
+    &-SwatchList,
+    &-DropDownList {
+        text-align: center;
+        margin-block-start: 2px;
+        margin-block-end: 12px;
+    }
+
+    &-Title {
+        font-weight: 700;
+        margin-block: 24px 12px;
+
+        &_isUnselected {
+            animation: var(--shake-animation);
+        }
+    }
+
+    &-SelectedOptionLabel {
+        font-weight: normal;
+        opacity: 0.7;
+        padding-inline-start: 17px;
+    }
+
+    &-SwatchList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-inline-start: 3px;
+        padding-block-start: 3px;
+
+        &_isUnselected {
+            animation: var(--shake-animation);
+        }
+    }
+
+    &-Placeholder {
+        animation: var(--placeholder-animation);
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        height: var(--option-size);
+        width: var(--option-size);
+        margin-block-end: var(--option-margin-block);
+        margin-block-start: var(--option-margin-block);
+        margin-inline-end: var(--option-margin-inline);
+        margin-inline-start: var(--option-margin-inline);
+    } 
+
+    &-Expandable:first-of-type {
+        border-block-start: none;
+    }
+
+    &-Expandable.ExpandableContent:last-of-type {
+        border-block-end: none;
+    }
+}
